@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNVS Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
         <h1>CNVS Gallery</h1>
     </header>
-
     <main>
-        <section id="upload-section">
-            <input type="file" id="imageUpload" accept="image/*" multiple>
-            <button id="connectInstagram">Connect Instagram</button>
-        </section>
-
-        <section id="gallery" class="gallery">
-            <p id="emptyMessage">Your gallery is empty. Upload images or connect Instagram.</p>
+        <section id="mockups">
+            <div class="mockup" data-id="1"></div>
+            <div class="mockup" data-id="2"></div>
+            <div class="mockup" data-id="3"></div>
         </section>
     </main>
 
-    <script src="app.js"></script>
+    <div id="uploadDialog" class="dialog hidden">
+        <div class="dialog-content">
+            <button id="closeDialog" class="close" aria-label="Close dialog">&times;</button>
+            <p>Select an option to add art</p>
+            <input type="file" id="imageUpload" accept="image/*" hidden>
+            <button id="uploadBtn">Upload from device</button>
+            <button id="connectInstagram">Connect Instagram</button>
+        </div>
+    </div>
 </body>
 </html>
